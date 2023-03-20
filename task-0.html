@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lecture 7</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header"></header>
+        <main class="page__container">
+            <div class="page__homework">
+                <h1 class="page__title">Лекція №7, Задача 0:</h1>
+                <div class="page__task" style="margin-bottom: 20px;">
+                    Створити функцію, яка за номером місяця повертає пору року, до якої відноситься цей місяць.
+                </div>
+            </div>
+        </main>
+        <footer class="footer"></footer>
+    </div>
+    <script>
+        function season(month) {
+            switch (month) {
+                case 12:
+                case 1:
+                case 2:
+                    result = 'Winter'
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    result = 'Spring'
+                    break
+                case 6:
+                case 7:
+                case 8:
+                    result = 'Summer'
+                    break
+                case 9:
+                case 10:
+                case 11:
+                    result = 'Autumn'
+                    break
+                default:
+                    result = 'Error'
+                    break;
+            }
+            return result
+        }
+        const month = parseInt(prompt('Введіть номер місяця,',(3)))
+        const timeOfTheYear = season(month)
+        document.write(timeOfTheYear)
+    </script>
+</body>
+</html>

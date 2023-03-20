@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+.wrapper {
+    overflow: hidden;
+    position: relative;
+    min-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper>main {
+    flex-grow: 1;
+}
+
+[class*="__container"] {
+    max-width: 1230px;
+    margin: 0 auto;
+}
+
+/* ============================================================================================ */
+/* ============================================================================================ */
+body{
+    background-color: #A9A9A9;
+}
+
+.page__container {}
+
+.page__homework {
+    font-family: Montserrat;
+}
+
+.page__title {
+    font-weight: 700;
+    font-size: 28px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.page__links {
+    display: flex;
+    flex-direction: column;
+}
+
+.page__link {
+    color: #FFFFFF;
+    font-weight: 600;
+    line-height: 28px;
+    padding: 18.5px 48px;
+    background-color: #FF6428;
+    border-radius: 40px;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+    margin-bottom: 40px;
+}
+.page__link:hover {
+    background-color: #c44513;
+}
+
+/* ============================================================================================ */
+/* ============================================================================================ */
+
+.page__container {}
+
+.page__title {}
+
+.page__picture {
+    max-width: 270px;
+}
+.page__picture img {
+    max-width: 100%;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lecture 7</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header"></header>
+        <main class="page__container">
+            <div class="page__homework">
+                <h1 class="page__title">Лекція №7, Задача 3:</h1>
+                <div class="page__task" style="margin-bottom: 20px;">
+                    Створити окремі функції, які для 4 чисел знаходять:<br>
+                    1) суму;<br>
+                    2) добуток;<br>
+                    3) середнє арифметичне;<br>
+                    4) мінімальне значення.<br>
+                </div>
+            </div>
+        </main>
+        <footer class="footer"></footer>
+    </div>
+    <script>
+        function sumOfNumbers(num1, num2, num3, num4) {
+            return num1 + num2 + num3 + num4
+        }
+        // ==========================================================================
+        let firstNumber = parseFloat(prompt('Введіть перше число',(2)))
+        let secondNumber = parseFloat(prompt('Введіть друге число', (6)))
+        let thirdNumber = parseFloat(prompt('Введіть трете число', (4)))
+        let fourthNumber = parseFloat(prompt('Введіть четверте число', (8)))
+
+        // ==========================================================================
+        let sumNum = sumOfNumbers(firstNumber,secondNumber,thirdNumber,fourthNumber)
+        document.write(`Сума чотирьох чисел дорівнює ${sumNum}<br>`)
+        // ==========================================================================
+        
+        function productOfNumbers(num1, num2, num3, num4) {
+            return num1 * num2 * num3 * num4
+        }
+
+        let prodNum = productOfNumbers(firstNumber, secondNumber, thirdNumber, fourthNumber)
+        document.write(`Добуток чотирьох чисел дорівнює ${prodNum}<br>`)
+        // ==========================================================================
+
+        function ArithmeticMeanOfNumbers(num1, num2, num3, num4) {
+            return (num1 + num2 + num3 + num4) / 4
+        }
+
+        let meanNum = ArithmeticMeanOfNumbers(firstNumber, secondNumber, thirdNumber, fourthNumber)
+        document.write(`Середнє арифметичне чотирьох чисел дорівнює ${meanNum}<br>`)
+        // ==========================================================================
+
+        function minimumValueOfNumbers(num1, num2, num3, num4) {
+            return Math.min(num1, num2, num3, num4)
+        }
+        let minNum = minimumValueOfNumbers(firstNumber, secondNumber, thirdNumber, fourthNumber)
+        document.write(`Мінімальне значення з чотирьох чисел - ${minNum}`)
+        // ==========================================================================
+    </script>
+</body>
+</html>

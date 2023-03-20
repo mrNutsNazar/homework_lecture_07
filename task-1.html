@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lecture 7</title>
+</head>
+<body>
+    <div class="page__homework">
+        <h1 class="page__title">Лекція №7, Задача 1:</h1>
+        <div class="page__task" style="margin-bottom: 20px;">
+            Створити функцію, яка за номером місяця повертає його назву.
+        </div>
+    </div>
+    <script>
+        function monthNumber(months) {
+            let monthName
+            switch (months) {
+                case 12:
+                    monthName = 'December'
+                    break;
+                case 1:
+                    monthName = 'January'
+                    break
+                case 2:
+                    monthName = 'February'
+                    break
+                case 3:
+                    monthName = 'March'
+                    break
+                case 4:
+                    monthName = 'April'
+                    break
+                case 5:
+                    monthName = 'May'
+                    break
+                case 6:
+                    monthName = 'June'
+                    break
+                case 7:
+                    monthName = 'July'
+                    break
+                case 8:
+                    monthName = 'August'
+                    break
+                case 9:
+                    monthName = 'September'
+                    break
+                case 10:
+                    monthName = 'October'
+                    break
+                case 11:
+                    monthName = 'November'
+                    break
+                default:
+                    monthName = 'Error!!!'
+                    break;
+            }
+            return monthName
+        }
+        const months = parseInt(prompt('Введіть номер місяця,', (3)))
+        document.write(monthNumber(months))
+    </script>
+</body>
+</html>

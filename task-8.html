@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lecture 7</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header"></header>
+        <main class="page__container">
+            <div class="page__homework">
+                <h1 class="page__title">Лекція №7, Задача 8:</h1>
+                <div class="page__task" style="margin-bottom: 30px;">
+                    Створити функцію, яка виводить банер (у функцію передаються: зображення, заголовок та посилання, куди
+                    переходимо при кліку на зображення) (тег img повине знаходитись у середині тега a: <a> <img src=”шлях”> </a>)
+                </div>
+            </div>
+        </main>
+        <footer class="footer"></footer>
+    </div>
+    <script>
+        function banner(title, link, picture) {
+            return `<h1>${title}</h1>
+            <a href="${link}" target="_blank"><img src="${picture}"/></a>`
+        }
+        let displayBanner = banner('Internet access', 'https://www.google.com/', '../img/earth.png')
+        document.write(displayBanner)
+    </script>
+</body>
+</html>

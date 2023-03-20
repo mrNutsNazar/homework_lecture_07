@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lecture 7</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header"></header>
+        <main class="page__container">
+            <div class="page__homework">
+                <h1 class="page__title">Лекція №7, Задача 6:</h1>
+                <div class="page__task" style="margin-bottom: 30px;">
+                    Створити функцію, яка створює таблицю з вказаною кількістю рядків і стовпців (таблиця заповнюється заданим
+                    фіксованим повідомленням).
+                </div>
+            </div>
+        </main>
+        <footer class="footer"></footer>
+    </div>
+    <script>        
+        function randomTable(rowNum, columNum) {
+            document.write(`<table border=2px;>`)
+            for (let numberOfLines = 0; numberOfLines < rowNum; numberOfLines++) {
+                document.write(`<tr>`)
+                for (let numberOfColumns = 0; numberOfColumns < columNum; numberOfColumns++) {
+                    document.write(`<td>Relax</td>`)
+                }
+                document.write(`</tr>`)
+            }
+            document.write(`</table>`)
+        }
+        const tableRow = parseInt(prompt("Введіть кількість рядків для таблиці:"))
+        const tableСolumn = parseInt(prompt("Введіть кількість стовпець для таблиці:"))
+        
+        const userTable = randomTable(tableRow, tableСolumn)
+        /*
+        Задача 7. Вивести на екран N абзаців (N вводиться користувачем) за зразком:
+        const n = parseInt(prompt("Введіть кількість абзаців:"))
+        let paragraphs = "";
+        for (let i = 1; i <= n; i++) {
+            paragraphs += "<h1>Заголовок " + i + "</h1>"
+                for (let j = 1; j <= i; j++) {
+                    paragraphs += "<p>Розділ " + i + ", параграф " + j + "</p>"
+                }
+                paragraphs += "<hr><br>"
+            }
+            document.write(paragraphs)
+        */
+    </script>
+</body>
+</html>

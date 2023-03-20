@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lecture 7</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header"></header>
+        <main class="page__container">
+            <div class="page__homework">
+                <h1 class="page__title">Лекція №7, Задача 7:</h1>
+                <div class="page__task" style="margin-bottom: 30px;">
+                    Створити функцію, яка випадковим чином виводить на екран одне із 4 зображень (шляхи до зображень передаються у функцію)
+                </div>
+            </div>
+        </main>
+        <footer class="footer"></footer>
+    </div>
+    <script>
+        function randomPicture(img1, img2, img3, img4) {
+            let numberPicture
+            const minPictureNum = 1
+            const maxPictureNum = 4
+            const randomPictureNum = minPictureNum + Math.floor(Math.random() * (maxPictureNum - minPictureNum + 1))
+            switch (randomPictureNum) {
+                case 1:
+                    numberPicture = img1
+                    break
+                case 2:
+                    numberPicture = img2
+                    break
+                case 3:
+                    numberPicture = img3
+                    break
+                case 4:
+                    numberPicture = img4
+                    break
+            }
+            return `<img src="${numberPicture}" alt="image"/>`
+        }
+        let imageRandom = randomPicture("../img/1-twitter.png","../img/2-youtube.png","../img/3-instagram.png","../img/4-facebook.png")
+        document.write(`${imageRandom}`)
+    </script>
+</body>
+</html>

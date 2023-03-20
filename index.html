@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson 7</title>
+</head>
+<body>
+    <a href="homework.html"><p style="font-size: 24px;">Домашнє завдання</p></a>
+    <hr>
+    <script>
+        function sum(a, b) {
+            return a + b
+        }
+        let s = sum(23, 9)
+        document.write(`${s}<br>`)
+// =================================================================
+        
+        let userName
+        userName = 'Olya'
+        userName = 'Sonya'
+        userName = 'Ksyusha'
+
+        function greeting(userName){
+            document.write(`Hello ${userName}<br>`)
+            document.write(`Wait ${userName}<br>`)
+            document.write(`Bay ${userName}<br>`)
+        }
+
+        greeting('Ksyusha')
+        greeting('Sonya')
+        greeting('Olya')
+// =================================================================
+
+        // Задача: Визначити середню оцінку з трьох предметів.
+
+        // 1. Опис функції
+        function getAverageScore(score1, score2, score3){
+            return (score1 + score2 + score3) / 3
+        }
+        // 2. Використання і розв'язання задачі
+        const scoreNumberOne = parseInt(prompt('Score 1 = '))
+        const scoreNumberTwo = parseInt(prompt('Score 2 = '))
+        const scoreNumberThree = parseInt(prompt('Score 3 = '))
+
+        const averageScore = getAverageScore(scoreNumberOne, scoreNumberTwo, scoreNumberThree)
+        document.write(`Avarege score ${averageScore}<br>`)
+// =================================================================
+
+        /*
+        Задача: Вивести привітання декількома мовами (створити функцію: 
+        мова задається (ua,en), а виводиться привітання 
+        на потрібній мові ('привіт', 'hello'))
+        */
+        function getGreeting(lang) {
+            switch (lang) {
+                case 'ua':
+                    result = 'Привіт'
+                    break;
+                case 'en':
+                    result = 'Hello'
+                    break;
+                default:
+                    result = 'Error'
+                    break;
+            }
+            return result
+        }
+
+        /*
+        // Ще один приклад:
+        function getGreeting(lang){
+            switch (lang) {
+                case 'ua': return 'Привіт'
+                case 'en'       '' return 'Hello'
+                default: return 'Error'
+            }
+        }
+        */
+        
+        const lang = prompt('Введіть локалізацію (ua/en)')
+        const msg = getGreeting(lang)
+        document.write(msg)
+// =================================================================
+    
+        /*
+        Задача: Знайти розмір заробітної плати 
+        (ставка + надбавка (benefits) - податок (tax%))
+        */
+        function getFinalSalary(salary, benefits, tax){
+            return (salary + benefits) * (1 - tax / 100)
+        }
+        let salary = parseFloat(prompt('Salary = '))
+        let benefits = parseFloat(prompt('Benefits = '))
+        let tax = parseFloat(prompt('Tax = '))
+
+        let finalSalary = getFinalSalary(salary, benefits, tax)
+        document.write(`Final: ${finalSalary}<br>`)
+// =================================================================
+
+        let getSum = function (a, b){
+            return a + b
+        }
+        let x1 = 2,
+        x2 = 3
+        let c = getSum(x1, x2)
+
+        document.write(`Sum: ${c}<br>`)
+// =================================================================
+
+        /*
+        Задача: Двоє гравців кидають двічі разів кубик і визначається сумарна
+        кількість балів. Визначити переможця.
+        */
+
+        function getDiceScore() {
+            return 1 + Math.floor(Math.random() * 6)
+        }
+
+        /*
+        Кількість балів першого гравця
+        first player roll = результат підкидання1 + результат підкидання2
+        */
+        const firstPlayerRoll = getDiceScore() + getDiceScore()
+
+        /*
+        Кількість балів другого гравця
+        second player throw = результат підкидання1 + результат підкидання2
+        */
+        const secondPlayerThrow = getDiceScore() + getDiceScore()
+        
+        if(firstPlayerRoll > secondPlayerThrow)
+            document.write('Переміг перший гравець')
+        else if (firstPlayerRoll < secondPlayerThrow)
+            document.write('Переміг другий гравець')
+        else
+        document.write('Нічия')
+// =================================================================
+
+        /*
+        Обчислити - S = Max(a, b) + Min(e, d) + Max(a, e)
+                    S =    m1     +     m2    +     m3
+        */
+
+        function getMax(c1, c2) {
+            return c1 > c2 ? c1 : c2
+        }
+        function getMin(c1, c2) {
+            return c1 < c2 ? c1 : c2
+        }
+
+        // Ввести змінні a, b, e, d
+        let a = parseFloat(prompt('a = '))
+        let b = parseFloat(prompt('b = '))
+        let e = parseFloat(prompt('e = '))
+        let d = parseFloat(prompt('d = '))
+
+        // Кроки розв'язання:
+        // m1 = Max(a, b)
+        // const m1 = getMax(a, b)
+        // m2 = Min(e, d)
+        // const m2 = getMin(e, d)
+        // m3 = Max(a, e)
+        // const m3 = getMax(a, e)
+        // const n = m1 + m2 + m3
+
+        const n = getMax(a, b) + getMin(e, d) + getMax(a, e)
+        document.write(`N = ${n}`)
+// =================================================================
+
+
+    </script>
+</body>
+</html>

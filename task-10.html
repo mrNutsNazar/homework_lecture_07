@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lecture 7</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header"></header>
+        <main class="page__container">
+            <div class="page__homework">
+                <h1 class="page__title">Лекція №7, Задача 10:</h1>
+                <div class="page__task" style="margin-bottom: 30px;">
+                    Дано покази температур (довільна кількість). Розробити функцію, яка дозволить знайти середнє значення для додатних показів температури.
+                </div>
+                <div style="margin-bottom: 15px;">Показники температури: 19, 9, 2, -6, -2, -19, 9, 4, -1, -2</div>
+            </div>
+        </main>
+        <footer class="footer"></footer>
+    </div>
+    <script>
+        function countNegativeTemperatures(...temperatures) {
+                let count = 0
+                let sumCount = 0
+                for (let i = 0; i < temperatures.length; i++) {
+                    if (temperatures[i] >= 0) {
+                        sumCount += temperatures[i]
+                        count++
+                    }
+                }
+                return sumCount / count
+            }
+            let temperatureResult = countNegativeTemperatures(19, 9, 2, -6, -2, -19, 9, 4, -1, -2)
+            document.write(`Середнє значення для додатних показів температур = ${temperatureResult}`)
+    </script>
+</body>
+</html>

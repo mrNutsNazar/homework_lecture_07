@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lecture 7</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header"></header>
+        <main class="page__container">
+            <div class="page__homework">
+                <h1 class="page__title">Лекція №7, Задача 4:</h1>
+                <div class="page__task" style="margin-bottom: 20px;">
+                    Створити функцію, яка для 3 заданих чисел знаходить одночасно декілька результатів: 
+                    <br>- кількість парних,
+                    <br>- кількість додатних, 
+                    <br>- кількість більших за 100.
+                </div>
+            </div>
+        </main>
+        <footer class="footer"></footer>
+    </div>
+    <script>
+        function multipleResults(num1, num2, num3) {
+            let evenNumbers = 0
+            let positiveNumbers = 0
+            let largerNumbers = 0
+
+            if(num1 % 2 === 0) evenNumbers++
+            if(num2 % 2 === 0) evenNumbers++
+            if(num3 % 2 === 0) evenNumbers++
+
+            if(num1 > 0) positiveNumbers++
+            if(num2 > 0) positiveNumbers++
+            if(num3 > 0) positiveNumbers++
+
+            if(num1 > 100) largerNumbers++
+            if(num2 > 100) largerNumbers++
+            if(num3 > 100) largerNumbers++
+            return `Кількість парних чисел: ${evenNumbers}.<br> Кількість додатних чисел: ${positiveNumbers}.<br> Кількість чисел більших за 100: ${largerNumbers}.`
+        }
+        
+            let firstNumber = parseFloat(prompt('Введіть перше число', (2)))
+            let secondNumber = parseFloat(prompt('Введіть друге число', (6)))
+            let thirdNumber = parseFloat(prompt('Введіть трете число', (4)))
+
+            let finalResult = multipleResults(firstNumber, secondNumber, thirdNumber)
+            document.write(`${finalResult}`)
+    </script>
+</body>
+</html>

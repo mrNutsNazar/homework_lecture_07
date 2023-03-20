@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lecture 7</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header"></header>
+        <main class="page__container">
+            <div class="page__homework">
+                <h1 class="page__title">Лекція №7, Задача 5:</h1>
+                <div class="page__task" style="margin-bottom: 20px;">
+                    Створити окремі функції, які переводять:<br>
+                    1) Сантиметри у дюйми;<br>
+                    2) Кілограми у фунти;<br>
+                    3) Кілометри у милі.<br>
+                </div>
+            </div>
+        </main>
+        <footer class="footer"></footer>
+    </div>
+    <script>
+        function unitInch(num) {
+            const inch = 0.393700787
+            return num * inch
+        }
+
+        let centimeters = parseFloat(prompt('Введіть кількість сантиметрів', (20)))
+        let numberOfInches = unitInch(centimeters)
+        document.write(`${numberOfInches} дюймов<br>`)
+        //=====================================================================================
+        function unitKilogram(number) {
+            const pounds = 2.20462262
+            return number * pounds
+        }
+
+        let kilograms = parseFloat(prompt('Введіть кількість кілограм', (6)))
+        let numberOfPounds = unitKilogram(kilograms)
+        document.write(`${numberOfPounds} фунтів<br>`)
+
+        //=====================================================================================
+        function unitMiles(numbers) {
+            const miles = 0.621371192
+            return numbers * miles
+        }
+        let kilometers = parseFloat(prompt('Введіть кількість кілометрів', (4)))
+        let numberOfMiles = unitMiles(kilometers)
+        document.write(`${numberOfMiles} милі`)
+    </script>
+</body>
+</html>
